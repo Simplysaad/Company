@@ -1,0 +1,279 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta name="author" content="simply_saad">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <nav class="nav navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <div class="navbar-brand order-md-1">
+          <a href="#"  class="display-6 text-light text-decoration-none">SimplySaad</a>
+        </div>
+        
+        <button type="button" class="navbar-toggler order-md-3" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse order-md-3" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Account</a>
+            </li>
+            <li class="nav-item">
+              <ahref="#" class="nav-link">Help</ahref>
+            </li>
+            <li class="nav-item ">
+              <a href="#" class="nav-link d-inline">Cart</a> 
+              <!-- <span class="badge bg-secondary d-none" id="cartBadge"></span> -->
+            </li>
+          </ul>
+        </div>
+        <form class="order-md-2">
+          <div class="input-group my-3 col-12 mx-auto p-3 ">
+            <input class="form-control" 
+            placeholder="Search for brands products and categories" 
+            type="search" id="searchInput" value="kaftan">
+            <button class="btn btn-success" id="btnSearch" type="button">
+              <i class="fa fa-search"></i>
+              <span class="d-none d-md-inline">Search</span>
+            </button>
+            <button class="btn btn-warning" id="btnCancel" type="reset">
+              <i class="fa fa-times"></i>
+              <span class="d-none d-md-inline">Cancel</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </nav>
+    <section id="searchParent">
+      <h1 class="display-5 mt-3 p-3">Search results</h1>
+      <div id="searchCont" class="container px-auto row g-2 my-5">
+       <!--  this is where the searvh results will go -->
+      </div>
+    </section>
+    
+    <section id="mainParent">
+      <h1 class="display-5 mt-3 p-3"> Main content</h1>
+      <div id="mainCont" class="container px-auto row g-2 my-5">
+       
+        <!-- products display goes here-->
+      </div>
+    </section>
+    <section id="preview">
+      <h1 class="display-6 mt-3 p-3">
+        
+      </h1>
+      <div id="previewCont" class="container justify-content-center
+      align-items-start d-md-flex col-lg-8 mx-auto row">
+       <!--  This should contain apreview of a single item/ product -->
+       <div class="preview-image pt-5 d-flex justify-content-between flex-column mx-auto col-10 col-md-6">
+         <img src="" id="previewImage" class="img-fluid" alt="image-10">
+         <div class="preview-desc">
+           <div id="previewTags" class="d-flex g-3">
+             
+           </div>
+           <div id="previewInfo">
+             
+           </div>
+         </div>
+       </div>
+       <div class="preview-info my-5 col-md-6">
+         <div class="product-name py-3">
+           <h1 class="display-4" id="previewName">
+             
+           </h1>
+         </div>
+         <div class="product-features">
+           <div class="row g-5">
+             <div class="col-6 d-flex flex-column justify-content-center">
+               <h4 class="lead mb-0" id="previewType">
+                 
+               </h4>
+               <p class="mt-0 text-uppercase text-small text-secondary">
+                 type
+               </p>
+             </div>
+             <div class="col-6 d-flex flex-column justify-content-center">
+               <h4 class="lead mb-0" id="previewBrand">
+                 
+               </h4>
+               <p class="mt-0 text-uppercase text-small text-secondary">
+                 brand
+               </p>
+             </div>
+             <div class="col-6 d-flex flex-column justify-content-center">
+               <h4 class="lead mb-0" id="previewMaterial">
+                 
+               </h4>
+               <p class="mt-0 text-uppercase text-small text-secondary">
+                 material
+               </p>
+             </div>
+             <div class="col-6 d-flex flex-column justify-content-center">
+               <h4 class="lead mb-0" id="previewCondition">
+                 
+               </h4>
+               <p class="mt-0 text-uppercase text-small text-secondary">
+                 condition
+               </p>
+             </div>
+             <div class="col-6 d-flex flex-column justify-content-center">
+               <!-- <h4 class="lead mb-0">
+                 Black
+               </h4> -->
+               <select class="form-control col-6" id="previewColors">
+                 <option disabled class="display-6">Pick a color</option>
+                 
+               </select>
+               <p class="mt-0 text-uppercase text-small text-secondary">
+                 colors
+               </p>
+             </div>
+             <div class="col-6 d-flex flex-column justify-content-center">
+               <h4 class="lead mb-0" id="previewGender">
+                 
+               </h4>
+               <p class="mt-0 text-uppercase text-small text-secondary">
+                 gender
+               </p>
+             </div>
+             <div class="col-6 d-flex flex-column justify-content-center">
+               <!-- <h4 class="lead mb-0">
+                 Large, medium, small
+               </h4> -->
+               <select class="form-control col-6" id="previewSizes">
+                 
+                 <option disabled=""  class="display-6">choose a size or custom</option>
+                 
+                 <option value="custom" class="display-6">Custom</option>
+               </select>
+               <p class="mt-0 text-uppercase text-small text-secondary">
+                 sizes
+               </p>
+             </div>
+             
+             <form id="customMeas" class="custom-measurement row g-4">
+               <h3 class="display-4">Custom Measurement</h3>
+               <h6 class="display-5">Shirt</h6>
+               <div class="form-floating col-6 col-md-4">
+                 <input class="form-control" placeholder="" type="number" name="" id="neck">
+                 <label class="form-label" for="neck">Neck</label>
+               </div>
+               <div class="form-floating col-6 col-md-4 ">
+                 <input class="form-control" placeholder="" type="number" name="" id="bust">
+                 <label class="form-label" for="bust">Bust</label>
+               </div>
+               <div class="form-floating col-6 col-md-4">
+                 <input class="form-control" placeholder="" type="number" name="" id="shoulder">
+                 <label class="form-label" for="shoulder">shoulder</label>
+               </div>
+               <div class="form-floating col-6 col-md-4">
+                 <input class="form-control" placeholder="" type="number" name="" id="arms length">
+                 <label class="form-label" for="arms length">arm</label>
+               </div>
+               <h6 class="display-5">Trouser</h6>
+               <div class="form-floating col-6 col-md-4">
+                 <input class="form-control" placeholder="" type="number" name="" id="waist">
+                 <label class="form-label" for="waist">waist</label>
+               </div>
+               <div class="form-floating col-6 col-md-4">
+                 <input class="form-control" placeholder="" type="number" name="" id="hips">
+                 <label class="form-label" for="hips">hips</label>
+               </div>
+               <div class="form-floating col-6 col-md-4">
+                 <input class="form-control" placeholder="" type="number" name="" id="thigh">
+                 <label class="form-label" for="thigh">thigh</label>
+               </div>
+               <div class="form-floating col-6 col-md-4">
+                 <input class="form-control" placeholder="" type="number" name="" id="trouserLength">
+                 <label class="form-label" for="trouserLength">trouser length</label>
+               </div>
+             </form>
+             
+             <button type="button" class="btn-lg col-8 mt-3 mb-5 mx-auto btn btn-success">
+               <i class="fa fa-shopping-cart"></i>
+               Add to Cart
+             </button>
+           </div>
+         </div>
+       </div>
+       
+      </div>
+    </section>
+    <footer class="bg-dark pt-5 pb-3 px-3 footer">
+    <div class="container text-secondary">
+      <div class="row">
+        <div class="col-md-4 col-lg-3 list-group my-3">
+          <h3 class="lead display-5 text-light">
+            SimplySaad<sup class="fs-6 fw-light">&reg;</sup>
+          </h3>
+          <a href="#" class="text-secondary text-decoration-none">Home</a>
+          <a href="#" class="text-secondary text-decoration-none">About</a>
+          <a href="#" class="text-secondary text-decoration-none">Contact Us</a>
+          <!-- <a href="#" class="text-secondary text-decoration-none">About</a> -->
+        </div>
+        
+        <div class="col-md-4 col-lg-3 list-group my-3">
+          <h3 class="display-6">
+            Categories
+          </h3>
+          <a href="#" class="text-secondary text-decoration-none">Kaftans</a>
+          <a href="#" class="text-secondary text-decoration-none">Jallabiya</a>
+          <a href="#" class="text-secondary text-decoration-none">Accessories</a>
+          <a href="#" class="text-secondary text-decoration-none">Perfumes</a>
+          <a href="#" class="text-secondary text-decoration-none">New Arrivals</a>
+          <a href="#" class="text-secondary text-decoration-none">Caps</a>
+        </div>
+        
+        <div class="col-md-4 col-lg-3 list-group my-3">
+          <h3 class="display-6">
+            Legal
+          </h3>
+          <a href="#" class="text-secondary text-decoration-none">Patnerships</a>
+          <a href="#" class="text-secondary text-decoration-none">Privacy policy</a>
+          <a href="#" class="text-secondary text-decoration-none">Do not sell my data</a>
+          <!-- <a href="#" class="text-secondary text-decoration-none">About</a> -->
+        </div>
+        <div class="col-md-4 col-lg-3 px-0 my-4">
+          <h3 class="fs-2">Subscribe to Our NewsLetter</h3>
+          <div class="input-group my-3">
+            <input class="form-control"
+            type="email" id="emailAddress" required
+            placeholder="Your Email Address">
+           <!-- when subscribe is clicked, a modal should appear thanking the
+           user for subscribing  -->
+            <button class="btn btn-lg btn-success" type="submit">
+              Subscribe
+            </button>
+          </div>
+          
+          
+          
+        </div>
+      </div>
+    </div>
+    <div class="copyright container text-secondary text-center">
+      <hr>
+      <div class="socials text-center mb-3 mt-5">
+            <div class="d-flex mx-auto justify-content-between col-7 col-md-3">
+              <a href="https://www.instagram.com/simply_sa_ad" class="fab fa-2x fa-instagram"></a>
+              <a href="https://www.github.com/simplysaad" class="fab fa-2x fa-github"></a>
+              <a  href="https://x.com/simply_saad?s=09" class="fab fa-2x fa-twitter"></a>
+              <a href="https://wa.me/+2349076147178?text=hi,+from+your+website"class="fab fa-2x fa-whatsapp"></a>
+            </div>
+     </div>
+      <p class="">&copy; 2024 SimplySaad.inc,  All rights Reserved</p>
+    </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.js"></script>
+    <script src="./Script.js" type="module"></script>
+  </body>
+</html>
