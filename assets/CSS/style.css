@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.text-small{
+  font-size: .7rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+a.fab{
+  color: grey;
+  text-decoration: none;
+}
+#previewTags{
+  text-align: center;
+  padding: 20px 1px;
+}
